@@ -63,3 +63,61 @@ Vamos a configurar este proyecto para que use un modelo específico, como `gemin
 - La configuración local **siempre tiene prioridad** sobre la configuración global cuando ejecutas `gemini` desde dentro de ese proyecto.
 - La forma más directa de cambiar el modelo de IA para un proyecto es editar el campo `model` en el `config.toml` local.
 - Esto te permite usar el potente y costoso `gemini-1.5-pro` para tareas complejas en un proyecto, y el rápido y económico `gemini-1.5-flash` para tareas más simples en otro.
+
+---
+
+## Anexo: Instalación de `gemini-cli`
+
+Para poder realizar este tutorial, necesitas tener `gemini-cli` instalado.
+
+**Requisito previo:** Debes tener **Python 3.9+** y **pip** (el gestor de paquetes de Python) instalados en tu sistema.
+
+Se recomienda encarecidamente instalar la herramienta en un **entorno virtual** para evitar conflictos con otros paquetes de Python.
+
+### Linux y macOS
+
+1.  **Abre tu terminal.**
+2.  **Crea y activa un entorno virtual (opcional pero recomendado):**
+    ```bash
+    # Crea el entorno
+    python3 -m venv gemini-cli-env
+
+    # Activa el entorno
+    source gemini-cli-env/bin/activate
+    ```
+    *Tu prompt debería cambiar para indicar que estás dentro del entorno.*
+
+3.  **Instala `gemini-cli` usando pip:**
+    ```bash
+    pip install google-gemini-cli
+    ```
+
+### Windows
+
+1.  **Abre PowerShell o el Símbolo del sistema (cmd).**
+2.  **Crea y activa un entorno virtual (opcional pero recomendado):**
+    ```powershell
+    # Crea el entorno
+    python -m venv gemini-cli-env
+
+    # Activa el entorno en PowerShell
+    .\gemini-cli-env\Scripts\Activate.ps1
+    
+    # O si usas cmd.exe
+    # .\gemini-cli-env\Scripts\activate.bat
+    ```
+
+3.  **Instala `gemini-cli` usando pip:**
+    ```bash
+    pip install google-gemini-cli
+    ```
+
+### Verificación de la Instalación
+
+Una vez instalado, puedes verificar que todo funciona correctamente ejecutando el comando de ayuda:
+
+```bash
+gemini --help
+```
+
+Si ves la lista de comandos disponibles, ¡`gemini-cli` está listo para usarse!
